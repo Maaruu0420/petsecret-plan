@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寵秘生技 - 2026年7月社群行銷規劃</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Sans+TC:wght@300;400;500;700;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Brand palette — warm, natural, organic */
+            --cream:     #F8F3EC;
+            --cream-mid: #F2EBE0;
+            --warm-tan:  #E8DDD0;
+            --gold:      #C9963A;
+            --gold-light:#E8BB6A;
+            --gold-pale: #F5EDDB;
+            --brown:     #5C3D1E;
+            --brown-mid: #8B6240;
+            --navy:      #1C3557;
+            --navy-light:#2E5280;
+            --teal:      #3A7D8C;
+            --teal-light:#A8D4DF;
+            --sage:      #7DAF9C;
+            --coral:     #D4614A;
+            --ink:       #2A2218;
+            --mid-ink:   #5A4E42;
+            --light-ink: #8C7F72;
+        }
+
+        html, body { width: 100%; overflow-x: hidden; }
+
+        body {
+            background-color: #3d3428;
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        @media print {
+            body { background: white; padding: 0; gap: 0; display: block; }
+            .slide-wrap { width: 100% !important; height: 100vh !important; }
+            .slide { margin: 0; box-shadow: none; width: 1123px !important; height: 794px !important; transform: none !important; position: relative !important;
+                     page-break-after: always !important; break-after: page !important;
+                     border: none; overflow: hidden; }
+            .slide:last-child { page-break-after: auto !important; }
+        }
+
+        /* ── RWD 等比縮放容器（wrapper 撐比例 + slide 整體 scale）── */
+        .slide-wrap {
+            width: min(1123px, 95vw);
+            position: relative;
+        }
+        .slide-wrap::before {
+            content: "";
+            display: block;
+            padding-top: 70.7%; /* 794/1123 維持比例 */
+        }
+        .slide {
+            width: 1123px;
+            height: 794px;
+            background: var(--cream);
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 16px 50px rgba(0,0,0,0.55);
+            transform-origin: top left;
+            transform: scale(calc(min(1123px, 95vw) / 1123px));
+        }
+
+        /* ─── TYPOGRAPHY ─── */
+        .eyebrow {
+            font-size: 13px;
+            letter-spacing: 4px;
+            font-weight: 500;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+        .slide-num {
+            font-family: 'DM Serif Display', serif;
+            font-size: 80px;
+            color: var(--ink);
+            opacity: 0.07;
+            line-height: 1;
+            font-style: italic;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: 0.5px;
+        }
+        .section-head {
+            display: flex;
+            align-items: baseline;
+            gap: 20px;
+            padding: 50px 80px 0;
+        }
+        .section-head-inner { display: flex; flex-direction: column; gap: 5px; }
+
+        /* ─── COVER (July: asymmetric layout, vertical accent) ─── */
+        .cover {
+            background: var(--cream);
+            flex-direction: row;
+        }
+        .cover::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 55% 75% at 20% 50%, rgba(58,125,140,0.10) 0%, transparent 65%),
+                radial-gradient(ellipse 45% 55% at 90% 80%, rgba(201,150,58,0.10) 0%, transparent 60%);
+        }
+        /* July uses a vertical bar accent instead of circle */
+        .cover::after {
+            content: "";
+            position: absolute;
+            width: 480px; height: 480px;
+            border-radius: 50%;
+            border: 1px solid rgba(58,125,140,0.18);
+            left: 68%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .cover-left {
+            flex: 1.2;
+            padding: 0 60px 0 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        .cover-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gold-pale);
+            border: 1px solid rgba(201,150,58,0.3);
+            border-radius: 30px;
+            padding: 7px 18px;
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 28px;
+            width: fit-content;
+        }
+        .cover h1 {
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--ink);
+            line-height: 1.12;
+            margin-bottom: 18px;
+        }
+        .cover h1 em {
+            font-style: normal;
+            color: var(--teal);
+            font-family: 'DM Serif Display', serif;
+            font-size: 70px;
+        }
+        .cover-sub {
+            font-size: 16px;
+            color: var(--mid-ink);
+            line-height: 1.9;
+            font-weight: 300;
+            margin-bottom: 44px;
+            max-width: 420px;
+        }
+        .cover-meta {
+            display: flex;
+            gap: 32px;
+            padding-top: 28px;
+            border-top: 1px solid var(--warm-tan);
+        }
+        .meta-item .lbl { font-size: 13px; letter-spacing: 2px; color: var(--gold); margin-bottom: 6px; font-weight: 600; }
+        .meta-item .val { font-size: 16px; font-weight: 700; color: var(--ink); }
+        .cover-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        .cover-big {
+            text-align: center;
+        }
+        .cover-big .num {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-size: 230px;
+            color: var(--teal);
+            line-height: 1;
+            opacity: 0.85;
+        }
+        .cover-big .sub-label {
+            font-size: 13px;
+            letter-spacing: 8px;
+            color: var(--light-ink);
+            margin-top: 4px;
+        }
+        .cover-brand {
+            position: absolute;
+            bottom: 36px; left: 90px;
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: var(--light-ink);
+            z-index: 3;
+        }
+
+        /* ─── FREQ SLIDE ─── */
+        .freq-body {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 24px 80px 56px;
+        }
+        .freq-card {
+            flex: 1;
+            height: 100%;
+            background: #fff;
+            border-radius: 20px;
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            border: 1px solid var(--warm-tan);
+            position: relative;
+            overflow: hidden;
+        }
+        .freq-card::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+        }
+        .freq-card.fc1::after { background: linear-gradient(90deg, var(--navy), var(--teal)); }
+        .freq-card.fc2::after { background: linear-gradient(90deg, var(--gold), #E8A04A); }
+        .freq-card.fc3::after { background: linear-gradient(90deg, var(--sage), var(--teal)); }
+        .freq-card .fc-icon { font-size: 30px; }
+        .freq-card .fc-label {
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            color: var(--light-ink);
+            font-weight: 600;
+        }
+        .freq-card .fc-big {
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--ink);
+            line-height: 1.5;
+        }
+        .freq-card .fc-big span { font-size: 38px; color: var(--gold); }
+        .freq-card .fc-desc {
+            font-size: 15px;
+            color: var(--mid-ink);
+            line-height: 1.85;
+            flex: 1;
+        }
+        .freq-card .fc-desc b { color: var(--ink); font-weight: 700; }
+        .fc-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+        .fc-pill {
+            font-size: 13px;
+            padding: 5px 13px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .pill-tan { background: var(--gold-pale); color: var(--brown); }
+        .pill-blue { background: #E8EDF4; color: var(--navy); }
+        .pill-sage { background: rgba(125,175,156,0.18); color: #2d6b52; }
+
+        /* ─── OVERVIEW ─── */
+        .overview-body {
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            padding: 20px 80px 56px;
+        }
+        .ov-card {
+            flex: 1;
+            background: #fff;
+            border-radius: 20px;
+            padding: 32px 26px;
+            border: 1px solid var(--warm-tan);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+        .ov-card::before {
+            content: "";
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 120px;
+            border-radius: 0 0 20px 20px;
+        }
+        .ov-card.oc1::before { background: linear-gradient(0deg, rgba(28,53,87,0.04) 0%, transparent 100%); }
+        .ov-card.oc2::before { background: linear-gradient(0deg, rgba(201,150,58,0.06) 0%, transparent 100%); }
+        .ov-card.oc3::before { background: linear-gradient(0deg, rgba(125,175,156,0.07) 0%, transparent 100%); }
+        .ov-num {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-size: 56px;
+            line-height: 1;
+        }
+        .oc1 .ov-num { color: var(--navy); }
+        .oc2 .ov-num { color: var(--gold); }
+        .oc3 .ov-num { color: var(--sage); }
+        .ov-label {
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .oc1 .ov-label { color: var(--navy); }
+        .oc2 .ov-label { color: var(--brown-mid); }
+        .oc3 .ov-label { color: #2d6b52; }
+        .ov-title {
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--ink);
+            line-height: 1.3;
+        }
+        .ov-desc {
+            font-size: 15px;
+            color: var(--mid-ink);
+            line-height: 1.85;
+            flex: 1;
+        }
+        .ov-count {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            width: fit-content;
+        }
+        .oc1 .ov-count { background: #E8EDF4; color: var(--navy); }
+        .oc2 .ov-count { background: var(--gold-pale); color: var(--brown); }
+        .oc3 .ov-count { background: rgba(125,175,156,0.2); color: #2d6b52; }
+        .ov-dates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .ov-date-chip {
+            font-size: 13px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .oc1 .ov-date-chip { background: #E8EDF4; color: var(--navy-light); }
+        .oc2 .ov-date-chip { background: var(--gold-pale); color: #7a5810; }
+        .oc3 .ov-date-chip { background: rgba(125,175,156,0.18); color: #2d6b52; }
+
+        /* ─── THEME SLIDES ─── */
+        .theme-slide {
+            flex-direction: row;
+        }
+        .theme-accent {
+            width: 6px;
+            flex-shrink: 0;
+        }
+        .ta-practical { background: linear-gradient(180deg, var(--navy) 0%, var(--teal) 100%); }
+        .ta-knowledge { background: linear-gradient(180deg, var(--gold) 0%, #c06030 100%); }
+        .ta-resonance { background: linear-gradient(180deg, var(--sage) 0%, var(--teal) 100%); }
+
+        .theme-left {
+            width: 300px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 64px 40px 64px 56px;
+            position: relative;
+        }
+        .tl-practical { background: linear-gradient(160deg, var(--navy) 0%, #0E1F33 100%); }
+        .tl-knowledge { background: linear-gradient(160deg, #5C3D1E 0%, #3A2010 100%); }
+        .tl-resonance { background: linear-gradient(160deg, #1A3D35 0%, #0E2420 100%); }
+        .theme-left::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.06) 0%, transparent 60%);
+        }
+        .tl-circle {
+            position: absolute;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.06);
+            right: -60px; top: 50%; transform: translateY(-50%);
+        }
+        .tl-big-num {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-size: 110px;
+            color: rgba(255,255,255,0.07);
+            position: absolute;
+            top: 20px; left: 20px;
+            line-height: 1;
+        }
+        .tl-icon { font-size: 44px; margin-bottom: 18px; position: relative; z-index: 2; }
+        .theme-left h2 { font-size: 26px; color: #fff; line-height: 1.3; margin-bottom: 10px; position: relative; z-index: 2; }
+        .tl-en {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-size: 14px;
+            color: rgba(255,255,255,0.45);
+            letter-spacing: 2px;
+            position: relative; z-index: 2;
+        }
+        .tl-posts {
+            position: absolute;
+            bottom: 44px; left: 56px;
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: rgba(255,255,255,0.4);
+            z-index: 2;
+        }
+
+        .theme-right {
+            flex: 1;
+            padding: 50px 60px 50px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 14px;
+        }
+        .tr-head { margin-bottom: 4px; }
+        .tr-head .sub { font-size: 13px; letter-spacing: 3px; color: var(--gold); margin-bottom: 6px; }
+        .tr-head h3 { font-size: 17px; color: var(--mid-ink); font-weight: 400; line-height: 1.6; }
+
+        .tc-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 18px 22px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            border: 1px solid var(--warm-tan);
+        }
+        .tc-date-box {
+            flex-shrink: 0;
+            text-align: center;
+            min-width: 56px;
+        }
+        .tc-date-box .mon { font-size: 13px; letter-spacing: 1.5px; color: var(--light-ink); font-weight: 600; }
+        .tc-date-box .day {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-size: 38px;
+            color: var(--gold);
+            line-height: 1;
+        }
+        .tc-date-box .wd { font-size: 13px; color: var(--light-ink); font-weight: 500; }
+        .tc-vl { width: 1px; background: var(--warm-tan); align-self: stretch; flex-shrink: 0; }
+        .tc-body { flex: 1; }
+        .tc-body h4 { font-size: 19px; color: var(--ink); font-weight: 700; margin-bottom: 5px; line-height: 1.4; }
+        .tc-body p { font-size: 14px; color: var(--mid-ink); line-height: 1.7; }
+        .tc-visual {
+            display: inline-block;
+            margin-top: 7px;
+            font-size: 13px;
+            color: var(--brown-mid);
+            background: var(--gold-pale);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        /* ─── CALENDAR ─── */
+        .cal-slide {
+            background: #fff;
+            padding: 44px 64px 44px;
+        }
+        .cal-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--ink);
+        }
+        .cal-month-title {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-size: 56px;
+            color: var(--ink);
+            line-height: 1;
+        }
+        .cal-kicker { font-size: 13px; letter-spacing: 3px; color: var(--gold); margin-bottom: 6px; font-weight: 600; }
+        .cal-legend { display: flex; gap: 18px; align-items: center; }
+        .leg-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--mid-ink); font-weight: 500; }
+        .leg-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+        .ld-practical { background: var(--navy); }
+        .ld-knowledge { background: var(--gold); }
+        .ld-resonance { background: var(--sage); }
+
+        /* Solar term info band */
+        .solar-band {
+            background: var(--cream-mid);
+            border-radius: 12px;
+            padding: 12px 18px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .solar-label {
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: var(--gold);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .solar-items { display: flex; gap: 18px; flex-wrap: wrap; }
+        .solar-chip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--ink);
+            font-weight: 500;
+        }
+        .solar-chip b { color: var(--coral); font-weight: 700; }
+
+        /* July grid */
+        .jul-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+        .dow-header {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--light-ink);
+            text-align: center;
+            padding: 6px 0;
+        }
+        .dc {
+            border-radius: 10px;
+            padding: 8px 8px 7px;
+            min-height: 78px;
+            display: flex;
+            flex-direction: column;
+            background: var(--cream);
+        }
+        .dc.empty { background: transparent; min-height: 0; }
+        .dc.weekend { background: rgba(44,53,87,0.04); }
+        .dc.solar-day { background: rgba(212,97,74,0.07); }
+        .dc.post-practical { background: #EDF1F7; border: 1.5px solid var(--navy); }
+        .dc.post-knowledge { background: #FBF5E8; border: 1.5px solid var(--gold); }
+        .dc.post-resonance { background: #EEF5F2; border: 1.5px solid var(--sage); }
+
+        .dc-num { font-size: 14px; font-weight: 700; color: var(--ink); }
+        .dc-solar { font-size: 13px; color: var(--coral); font-weight: 600; margin-top: 1px; }
+        .dc-topic { font-size: 13px; color: var(--mid-ink); margin-top: 3px; line-height: 1.3; flex: 1; }
+        .dc-tag {
+            margin-top: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            padding: 2px 7px;
+            border-radius: 5px;
+            text-align: center;
+            align-self: stretch;
+        }
+        .dt-practical { background: var(--navy); }
+        .dt-knowledge { background: #9A7220; }
+        .dt-resonance { background: #2d6b52; }
+
+        /* ─── GUIDE ─── */
+        .guide-slide {
+            background: linear-gradient(145deg, #1A2535 0%, #0E1520 100%);
+        }
+        .guide-slide .section-head { padding: 50px 80px 0; position: relative; z-index: 2; }
+        .guide-slide::before {
+            content: "";
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(circle at 85% 15%, rgba(201,150,58,0.14) 0%, transparent 45%),
+                radial-gradient(circle at 15% 85%, rgba(125,175,156,0.1) 0%, transparent 45%);
+        }
+        .guide-slide .eyebrow { color: var(--gold); }
+        .guide-slide .section-title { color: #fff; }
+        .guide-slide .slide-num { color: var(--gold); }
+        .guide-body {
+            flex: 1;
+            padding: 20px 80px 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            position: relative; z-index: 2;
+        }
+        .g-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 22px 22px;
+        }
+        .g-card .gc-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .g-card .gc-num {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-size: 36px;
+            color: var(--gold);
+            line-height: 1;
+        }
+        .g-card h4 { font-size: 19px; color: #fff; font-weight: 700; }
+        .g-card p { font-size: 14px; color: rgba(255,255,255,0.72); line-height: 1.8; }
+        .g-card p b { color: var(--gold-light); }
+
+        /* ─── CLOSING ─── */
+        .closing {
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .closing::before {
+            content: "";
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse 55% 65% at 50% 50%, rgba(58,125,140,0.10) 0%, transparent 70%);
+        }
+        .closing::after {
+            content: "";
+            position: absolute;
+            width: 600px; height: 600px;
+            border-radius: 50%;
+            border: 1px solid rgba(58,125,140,0.14);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .closing-in { z-index: 2; }
+        .cl-tag {
+            display: inline-block;
+            font-size: 13px; letter-spacing: 5px;
+            color: var(--teal);
+            margin-bottom: 28px;
+            font-weight: 600;
+        }
+        .cl-main {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-size: 60px;
+            color: var(--ink);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .cl-sub { font-size: 20px; color: var(--mid-ink); letter-spacing: 5px; margin-bottom: 52px; font-weight: 300; }
+        .cl-brand {
+            font-size: 13px; letter-spacing: 4px; color: var(--light-ink);
+            padding-top: 24px;
+            border-top: 1px solid var(--warm-tan);
+            display: inline-block;
+            min-width: 300px;
+        }
+        /* ── RWD：窄螢幕僅微調間距，縮放交給 scale 機制 ── */
+        @media (max-width: 768px) {
+            body { padding: 20px 0; gap: 20px; }
+            .slide-wrap { width: 95vw; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ════ SLIDE 1: COVER ════ -->
+<div class="slide-wrap">
+<div class="slide cover">
+    <div class="cover-left">
+        <div class="cover-tag">SOCIAL · MEDIA · PLANNING</div>
+        <h1>七月盛夏<br><em>三軸並進</em></h1>
+        <p class="cover-sub">實用內容衝收藏、品牌科普建立專業感</p>
+        <div class="cover-meta">
+            <div class="meta-item"><div class="lbl">PERIOD</div><div class="val">7/1 – 7/31</div></div>
+            <div class="meta-item"><div class="lbl">FREQUENCY</div><div class="val">每週 2 篇</div></div>
+            <div class="meta-item"><div class="lbl">TOTAL POSTS</div><div class="val">共 9 篇</div></div>
+        </div>
+    </div>
+    <div class="cover-right">
+        <div class="cover-big">
+            <div class="num">07</div>
+            <div class="sub-label">J U L Y &nbsp;·&nbsp; 2 0 2 6</div>
+        </div>
+    </div>
+    <div class="cover-brand">寵秘生技 &nbsp;·&nbsp; PetSecret Bio &nbsp;·&nbsp; 寵物外泌體專家</div>
+</div>
+</div>
+
+<!-- ════ SLIDE 2: FREQ ════ -->
+<div class="slide-wrap">
+<div class="slide">
+    <div class="section-head">
+        <div class="slide-num">01</div>
+        <div class="section-head-inner">
+            <div class="eyebrow">P O S T &nbsp;·&nbsp; R H Y T H M</div>
+            <div class="section-title">發文頻率與執行規劃</div>
+        </div>
+    </div>
+    <div class="freq-body">
+        <div class="freq-card fc1">
+            <div class="fc-icon">📅</div>
+            <div class="fc-label">P O S T &nbsp; S C H E D U L E</div>
+            <div class="fc-big">每週 <span>2</span> 篇</div>
+            <p class="fc-desc">七月共規劃 <b>9 篇</b>主題貼文。本月橫跨<b>小暑（7/7）與大暑（7/22）</b>兩個節氣日，搭配暑假時段。</p>
+            <div class="fc-pills">
+                <span class="fc-pill pill-blue">節氣</span>
+                <span class="fc-pill pill-blue">暑假</span>
+                <span class="fc-pill pill-tan">盛夏主軸</span>
+            </div>
+        </div>
+        <div class="freq-card fc2">
+            <div class="fc-icon">✍️</div>
+            <div class="fc-label">C O N T E N T &nbsp; F O R M A T</div>
+            <div class="fc-big">輪播 <span>主導</span></div>
+            <p class="fc-desc">本月輪播比例提高至 <b>5 篇</b>，實用清單與品牌科普以輪播強化收藏與分享；情感型內容維持<b>單圖</b>留住氛圍。</p>
+            <div class="fc-pills">
+                <span class="fc-pill pill-blue">單圖貼文 x4</span>
+                <span class="fc-pill pill-tan">輪播貼文 x5</span>
+            </div>
+        </div>
+        <div class="freq-card fc3">
+            <div class="fc-icon">🎯</div>
+            <div class="fc-label">E X E C U T I O N &nbsp; P L A N</div>
+            <div class="fc-big">三大 <span>主軸</span></div>
+            <p class="fc-desc">實用情報給可收藏的工具型內容、品牌知識建立外泌體與成分專業感、飼主共鳴對號入座引發互動——三條主軸交錯推進，內容形態多元。</p>
+            <div class="fc-pills">
+                <span class="fc-pill pill-blue">實用情報 3篇</span>
+                <span class="fc-pill pill-tan">品牌知識 3篇</span>
+                <span class="fc-pill pill-sage">飼主共鳴 3篇</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ════ SLIDE 3: OVERVIEW ════ -->
+<div class="slide-wrap">
+<div class="slide">
+    <div class="section-head">
+        <div class="slide-num">02</div>
+        <div class="section-head-inner">
+            <div class="eyebrow">M O N T H L Y &nbsp;·&nbsp; T H E M E</div>
+            <div class="section-title">主題總覽</div>
+        </div>
+    </div>
+    <div class="overview-body">
+        <div class="ov-card oc1">
+            <div class="ov-num">①</div>
+            <div class="ov-label">P R A C T I C A L &nbsp; T I P S</div>
+            <div class="ov-title">盛夏實用情報</div>
+            <p class="ov-desc">出遊打包、居家設置、大暑常備清單——給飼主可以直接抄下來、收藏起來的工具型內容。視覺改以俯拍 flat lay 與插畫風為主。</p>
+            <div class="ov-dates">
+                <span class="ov-date-chip">7/2 週四</span>
+                <span class="ov-date-chip">7/13 週一</span>
+                <span class="ov-date-chip">7/23 週四</span>
+            </div>
+            <span class="ov-count">共 3 篇</span>
+        </div>
+        <div class="ov-card oc2">
+            <div class="ov-num">②</div>
+            <div class="ov-label">B R A N D &nbsp; K N O W L E D G E</div>
+            <div class="ov-title">品牌知識深化</div>
+            <p class="ov-desc">外泌體是什麼、三款原料、三份檢驗報告——僅使用<b>產品成分表與已公開資料</b>，不講功效。建立寵秘的科學專業感與品牌信任度。</p>
+            <div class="ov-dates">
+                <span class="ov-date-chip">7/6 週一</span>
+                <span class="ov-date-chip">7/16 週四</span>
+                <span class="ov-date-chip">7/27 週一</span>
+            </div>
+            <span class="ov-count">共 3 篇</span>
+        </div>
+        <div class="ov-card oc3">
+            <div class="ov-num">③</div>
+            <div class="ov-label">O W N E R &nbsp; R E S O N A N C E</div>
+            <div class="ov-title">飼主視角共鳴</div>
+            <p class="ov-desc">盛夏舉動對號入座、暑假陪伴情感文、毛爸月預告——透過情感共鳴、生活共感與月底承接，拉近與飼主的距離。CTA 採「留言 +1」設計，鼓勵飼主主動對號留言。</p>
+            <div class="ov-dates">
+                <span class="ov-date-chip">7/9 週四</span>
+                <span class="ov-date-chip">7/20 週一</span>
+                <span class="ov-date-chip">7/30 週四</span>
+            </div>
+            <span class="ov-count">共 3 篇</span>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ════ SLIDE 4: THEME 1 ════ -->
+<div class="slide-wrap">
+<div class="slide theme-slide">
+    <div class="theme-accent ta-practical"></div>
+    <div class="theme-left tl-practical">
+        <div class="tl-circle"></div>
+        <div class="tl-big-num">①</div>
+        <div class="tl-icon">🧰</div>
+        <h2>盛夏實用情報</h2>
+        <div class="tl-en">Practical Tips</div>
+        <div class="tl-posts">3 POSTS &nbsp;·&nbsp; 3 DATES</div>
+    </div>
+    <div class="theme-right">
+        <div class="tr-head">
+            <div class="sub">D I R E C T I O N &nbsp;·&nbsp; 0 1</div>
+            <h3>給飼主可以收藏帶走的工具型內容，視覺以物品擺拍與插畫為主，跳脫 6 月情境照</h3>
+        </div>
+        <div class="tc-card">
+            <div class="tc-date-box"><div class="mon">JUL</div><div class="day">2</div><div class="wd">THU</div></div>
+            <div class="tc-vl"></div>
+            <div class="tc-body">
+                <h4>帶毛孩出門前，這 7 件事不能漏掉｜暑假出遊打包清單</h4>
+                <p>暑假出遊潮，整理打包清單（補水壺、降溫毛巾、口腔噴霧、保健品分裝、便便袋等），自然帶到來舒齦與健骨頭日常保健角色，不講功效。</p>
+                <span class="tc-visual">📦 俯拍 flat lay 物品擺拍，淺色背景雜誌風</span>
+            </div>
+        </div>
+        <div class="tc-card">
+            <div class="tc-date-box"><div class="mon">JUL</div><div class="day">13</div><div class="wd">MON</div></div>
+            <div class="tc-vl"></div>
+            <div class="tc-body">
+                <h4>毛孩夏天最舒服的窩，5 個設置重點</h4>
+                <p>室內溫度建議、地點選擇（避空調直吹）、地墊材質、水盆位置、避光遮蔽。純實用內容、完全不提產品，純粹累積飼主好感。</p>
+                <span class="tc-visual">🛏️ 室內擺設示意插畫，俯視平面圖風</span>
+            </div>
+        </div>
+        <div class="tc-card">
+            <div class="tc-date-box"><div class="mon">JUL</div><div class="day">23</div><div class="wd">THU</div></div>
+            <div class="tc-vl"></div>
+            <div class="tc-body">
+                <h4>大暑｜居家常備這 5 樣，毛孩夏天更安心</h4>
+                <p>呼應大暑（7/22），列出居家常備物品：散熱墊、補水濕食、口腔保健、毛巾、急救聯絡資訊。CTA 為留言分享、不承諾提供資料。</p>
+                <span class="tc-visual">🎒 物品圖鑑風擺拍，每樣標註用途</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ════ SLIDE 5: THEME 2 ════ -->
+<div class="slide-wrap">
+<div class="slide theme-slide">
+    <div class="theme-accent ta-knowledge"></div>
+    <div class="theme-left tl-knowledge">
+        <div class="tl-circle"></div>
+        <div class="tl-big-num">②</div>
+        <div class="tl-icon">🔬</div>
+        <h2>品牌知識深化</h2>
+        <div class="tl-en">Brand Knowledge</div>
+        <div class="tl-posts">3 POSTS &nbsp;·&nbsp; 3 DATES</div>
+    </div>
+    <div class="theme-right">
+        <div class="tr-head">
+            <div class="sub">D I R E C T I O N &nbsp;·&nbsp; 0 2</div>
+            <h3>以產品成分表與已公開資料為基礎，建立寵秘的科學專業感與品牌信任度</h3>
+        </div>
+        <div class="tc-card">
+            <div class="tc-date-box"><div class="mon">JUL</div><div class="day">6</div><div class="wd">MON</div></div>
+            <div class="tc-vl"></div>
+            <div class="tc-body">
+                <h4>3 分鐘看懂｜寵秘把「外泌體」加進毛孩日常保健</h4>
+                <p>引用成分表事實：來舒齦含豬臍帶間質幹細胞外泌體、健骨頭含樟芝萃取物（外泌體）。建立「外泌體專家」品牌定位，不講功效、不講機轉。</p>
+                <span class="tc-visual">🧬 成分標籤局部放大＋品牌色塊</span>
+            </div>
+        </div>
+        <div class="tc-card">
+            <div class="tc-date-box"><div class="mon">JUL</div><div class="day">16</div><div class="wd">THU</div></div>
+            <div class="tc-vl"></div>
+            <div class="tc-body">
+                <h4>寵秘的三個原料｜你認得這些名字嗎？</h4>
+                <p>聚焦成分表寫出來的成分名：好嗨森屏東小農貓薄荷（IG 已公開）、來舒齦柿子萃取、健骨頭樟芝萃取。介紹「配方裡有這些東西」，不講作用。</p>
+                <span class="tc-visual">🌿 三款產品實拍＋成分表局部裁切</span>
+            </div>
+        </div>
+        <div class="tc-card">
+            <div class="tc-date-box"><div class="mon">JUL</div><div class="day">27</div><div class="wd">MON</div></div>
+            <div class="tc-vl"></div>
+            <div class="tc-body">
+                <h4>寵秘把關的三份報告｜每批產品出廠前的紀錄</h4>
+                <p>介紹品牌已公開的三類檢驗報告：Intertek 全國公證、COA、Certificate of Analysis，呈現寵秘出廠前的把關紀錄。</p>
+                <span class="tc-visual">📑 報告局部裁切＋品牌色覆蓋</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ════ SLIDE 6: THEME 3 ════ -->
+<div class="slide-wrap">
+<div class="slide theme-slide">
+    <div class="theme-accent ta-resonance"></div>
+    <div class="theme-left tl-resonance">
+        <div class="tl-circle"></div>
+        <div class="tl-big-num">③</div>
+        <div class="tl-icon">💚</div>
+        <h2>飼主視角共鳴</h2>
+        <div class="tl-en">Owner Resonance</div>
+        <div class="tl-posts">3 POSTS &nbsp;·&nbsp; 3 DATES</div>
+    </div>
+    <div class="theme-right">
+        <div class="tr-head">
+            <div class="sub">D I R E C T I O N &nbsp;·&nbsp; 0 3</div>
+            <h3>對號入座、情感共鳴、月底承接三種角度，鼓勵飼主主動留言互動</h3>
+        </div>
+        <div class="tc-card">
+            <div class="tc-date-box"><div class="mon">JUL</div><div class="day">9</div><div class="wd">THU</div></div>
+            <div class="tc-vl"></div>
+            <div class="tc-body">
+                <h4>盛夏限定｜你家毛孩有出現這些「夏天才會做」的舉動嗎？</h4>
+                <p>列舉 6 個夏天限定毛孩行為（貼磁磚、躲廚櫃、水盆踩腳、攤地毯…）。對號入座型，引導「+1」留言但不要求小編回應。</p>
+                <span class="tc-visual">🐾 六格漫畫風插畫或動作捕捉合輯</span>
+            </div>
+        </div>
+        <div class="tc-card">
+            <div class="tc-date-box"><div class="mon">JUL</div><div class="day">20</div><div class="wd">MON</div></div>
+            <div class="tc-vl"></div>
+            <div class="tc-body">
+                <h4>暑假在家陪牠，是這個夏天最值得的事</h4>
+                <p>以暑假飼主在家時間變多為切入，講陪伴本身就有價值。對「飼主自己」說話的情感文，CTA 為點 Bio 加 LINE。</p>
+                <span class="tc-visual">🏠 飼主與毛孩共處居家局部特寫</span>
+            </div>
+        </div>
+        <div class="tc-card">
+            <div class="tc-date-box"><div class="mon">JUL</div><div class="day">30</div><div class="wd">THU</div></div>
+            <div class="tc-vl"></div>
+            <div class="tc-body">
+                <h4>八月就是毛爸月｜先說，你家的他是哪一型毛爸？</h4>
+                <p>盤點四種毛爸（放縱型、嚴格型、寵溺型、嘴硬心軟型），預告 8 月父親節主題。輪播 4 張、活潑略幽默，做月份敘事銜接。</p>
+                <span class="tc-visual">👨‍👦 四格毛爸 × 毛孩插畫，幽默風格</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ════ SLIDE 7: CALENDAR ════ -->
+<div class="slide-wrap">
+<div class="slide cal-slide">
+    <div class="cal-top">
+        <div>
+            <div class="cal-kicker">0 3 &nbsp;·&nbsp; S C H E D U L E</div>
+            <div class="cal-month-title">July · 2026</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+            <div style="font-size:13px;letter-spacing:2px;color:var(--light-ink);">發 文 排 程 視 覺 總 覽</div>
+            <div class="cal-legend">
+                <span class="leg-item"><span class="leg-dot ld-practical"></span>實用情報</span>
+                <span class="leg-item"><span class="leg-dot ld-knowledge"></span>品牌知識</span>
+                <span class="leg-item"><span class="leg-dot ld-resonance"></span>飼主共鳴</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solar term info band -->
+    <div class="solar-band">
+        <div class="solar-label">節 氣 連 動</div>
+        <div class="solar-items">
+            <div class="solar-chip"><b>小暑 7/7（二）</b>· 透過 7/6 外泌體科普文連動</div>
+            <div class="solar-chip"><b>大暑 7/22（三）</b>· 透過 7/23 居家常備清單連動</div>
+        </div>
+    </div>
+
+    <!-- July grid -->
+    <div class="jul-grid">
+        <div class="dow-header">SUN</div>
+        <div class="dow-header">MON</div>
+        <div class="dow-header">TUE</div>
+        <div class="dow-header">WED</div>
+        <div class="dow-header">THU</div>
+        <div class="dow-header">FRI</div>
+        <div class="dow-header">SAT</div>
+
+        <!-- Row 1: Jun 28-30 grey, then 1-4 -->
+        <div class="dc empty"></div>
+        <div class="dc empty"></div>
+        <div class="dc empty"></div>
+        <div class="dc"><span class="dc-num">1</span></div>
+        <div class="dc post-practical"><span class="dc-num">2</span><span class="dc-topic">暑假出遊打包清單</span><span class="dc-tag dt-practical">實用情報</span></div>
+        <div class="dc"><span class="dc-num">3</span></div>
+        <div class="dc weekend"><span class="dc-num">4</span></div>
+
+        <!-- Row 2: 5-11 -->
+        <div class="dc weekend"><span class="dc-num">5</span></div>
+        <div class="dc post-knowledge"><span class="dc-num">6</span><span class="dc-topic">外泌體加進日常保健</span><span class="dc-tag dt-knowledge">品牌知識</span></div>
+        <div class="dc solar-day"><span class="dc-num">7</span><span class="dc-solar">小暑</span></div>
+        <div class="dc"><span class="dc-num">8</span></div>
+        <div class="dc post-resonance"><span class="dc-num">9</span><span class="dc-topic">夏天才會做的舉動</span><span class="dc-tag dt-resonance">飼主共鳴</span></div>
+        <div class="dc"><span class="dc-num">10</span></div>
+        <div class="dc weekend"><span class="dc-num">11</span></div>
+
+        <!-- Row 3: 12-18 -->
+        <div class="dc weekend"><span class="dc-num">12</span></div>
+        <div class="dc post-practical"><span class="dc-num">13</span><span class="dc-topic">夏天最舒服的窩</span><span class="dc-tag dt-practical">實用情報</span></div>
+        <div class="dc"><span class="dc-num">14</span></div>
+        <div class="dc"><span class="dc-num">15</span></div>
+        <div class="dc post-knowledge"><span class="dc-num">16</span><span class="dc-topic">寵秘的三個原料</span><span class="dc-tag dt-knowledge">品牌知識</span></div>
+        <div class="dc"><span class="dc-num">17</span></div>
+        <div class="dc weekend"><span class="dc-num">18</span></div>
+
+        <!-- Row 4: 19-25 -->
+        <div class="dc weekend"><span class="dc-num">19</span></div>
+        <div class="dc post-resonance"><span class="dc-num">20</span><span class="dc-topic">暑假陪牠最值得</span><span class="dc-tag dt-resonance">飼主共鳴</span></div>
+        <div class="dc"><span class="dc-num">21</span></div>
+        <div class="dc solar-day"><span class="dc-num">22</span><span class="dc-solar">大暑</span></div>
+        <div class="dc post-practical"><span class="dc-num">23</span><span class="dc-topic">居家常備 5 樣</span><span class="dc-tag dt-practical">實用情報</span></div>
+        <div class="dc"><span class="dc-num">24</span></div>
+        <div class="dc weekend"><span class="dc-num">25</span></div>
+
+        <!-- Row 5: 26-31 -->
+        <div class="dc weekend"><span class="dc-num">26</span></div>
+        <div class="dc post-knowledge"><span class="dc-num">27</span><span class="dc-topic">三份檢驗報告</span><span class="dc-tag dt-knowledge">品牌知識</span></div>
+        <div class="dc"><span class="dc-num">28</span></div>
+        <div class="dc"><span class="dc-num">29</span></div>
+        <div class="dc post-resonance"><span class="dc-num">30</span><span class="dc-topic">毛爸月預告</span><span class="dc-tag dt-resonance">飼主共鳴</span></div>
+        <div class="dc"><span class="dc-num">31</span></div>
+        <div class="dc empty"></div>
+
+    </div>
+</div>
+</div>
+
+<!-- ════ SLIDE 8: WRITING GUIDE ════ -->
+<div class="slide-wrap">
+<div class="slide guide-slide">
+    <div class="section-head">
+        <div class="slide-num">04</div>
+        <div class="section-head-inner">
+            <div class="eyebrow">W R I T I N G &nbsp;·&nbsp; G U I D E</div>
+            <div class="section-title">文 案 撰 寫 重 點</div>
+        </div>
+    </div>
+    <div class="guide-body">
+        <div class="g-card">
+            <div class="gc-top"><div class="gc-num">01</div><h4>合規用詞守則</h4></div>
+            <p>外泌體與成分敘述<b>不講功效、不講機轉</b>。避用詞：修復、再生、調節、提升、改善、抗發炎、免疫、活性、有效成分。改用「日常保健」「日常照護」中性表述。</p>
+        </div>
+        <div class="g-card">
+            <div class="gc-top"><div class="gc-num">02</div><h4>單向 CTA 原則</h4></div>
+            <p>本月所有貼文 CTA 都是單向行動：點 Bio、加 LINE、收藏、分享、「+1」對號入座，每篇結尾只給一個明確的行動指引。</p>
+        </div>
+        <div class="g-card">
+            <div class="gc-top"><div class="gc-num">03</div><h4>已驗證資訊原則</h4></div>
+            <p>品牌與成分相關敘述以官方公開資料為依據，確保每一段文字都有來源，建立飼主對品牌的長期信任。</p>
+        </div>
+        <div class="g-card">
+            <div class="gc-top"><div class="gc-num">04</div><h4>Hashtag 雙軌</h4></div>
+            <p>每篇 <b>4-8 個</b>，混合品牌標籤 <b>#寵秘生技 #外泌體</b> ＋ 季節標籤 <b>#盛夏照護 #毛孩日常</b>＋ 品項標籤如 <b>#來舒齦 #健骨頭 #好嗨森</b>。</p>
+        </div>
+        <div class="g-card">
+            <div class="gc-top"><div class="gc-num">05</div><h4>視覺風格差異化</h4></div>
+            <p>跳脫 6 月情境照主體：本月以<b>俯拍物品擺拍、科學插畫、室內局部特寫</b>三種視覺輪替，每張視覺刻意有別，避免風格疲乏。</p>
+        </div>
+        <div class="g-card">
+            <div class="gc-top"><div class="gc-num">06</div><h4>節氣與暑假連動</h4></div>
+            <p>本月以<b>盛夏深守護</b>為敘事主軸：小暑（7/7）、大暑（7/22）兩個節氣綁進品牌知識與實用情報，月末預告 8 月毛爸主題做承接。</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ════ SLIDE 9: CLOSING ════ -->
+<div class="slide-wrap">
+<div class="slide closing">
+    <div class="closing-in">
+        <div class="cl-tag">J U L Y &nbsp;·&nbsp; 2 0 2 6</div>
+        <div class="cl-main">Deep summer,<br>deeper care.</div>
+        <div class="cl-brand">寵秘生技 &nbsp;·&nbsp; PetSecret Bio &nbsp;·&nbsp; 寵物外泌體專家</div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
